@@ -1,67 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anthony's Personal Website</title>
-</head>
-<body>
-    <h1>
-        Anthony's <span style="text-decoration: underline;">Personal</span> Website!
-    </h1>
-    <p>
-        Welcome to the webpage. 
-        I just left my job at Torch Technologies on 8 August 2025 as a Data Scientist to go back to school full time.
-        I will be enrolled in Quantum Mechanics I (Physics 451), Optics and Waves (with lab), and CO300, Composition.
-    </p>
-    <a href="https://wwww.csu.com">CSU</a>
-    <p>
-        While at Torch Technologies, I accomplished the following:
-    </p>
-    <a href="https://wwww.torchtech.com">Torch</a>
-    <ul>
-        <li>
-        I deployed a 1D Convolutional Neural Network in production which had a 92% validation accuracy score.
-        I streamed the data, put the full messages into a queue, and then parsed and performed inference on the
-        complete messages before sending them to the database.
-        </li>
-        I built a web scraping program to get real time data 
-        and perform orbital mechanics transformations to be in a for that is usable for the customer.
-        <li>
-        I packaged a set of python modules that my office used on a daily basis for
-        calculating orbital mechanics transformations.
-        </li>
-        <li>
-        I deployed two other data pipelines (one which involed binary parsing and the other xml parsing)
-        so that the office could train and deploy future models.
-        </li>
-    </ul>
-    <ol>
-        <li>First</li>
-        <li>Second</li>
-        <li>Third</li>
-    </ol>
-    <button>Button!</button>
-    <img 
-    src="/Users/AnthonyGeraldShea1/Desktop/AnthonySheasFolder/IMG_7491.JPG"
-    alt="Trey's wedding"
-    />
-    <input/>
-    <input type="text"/>
-    <input type="color"/>
-    <input type="number"/>
-    <input type="file"/>
-    <input type="datetime-local"/>
-    <input type="radio"/>
-    <input type="checkbox"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anthony Shea - CV</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cv-container">
+      <!-- LEFT COLUMN -->
+      <aside class="left-column">
+        <section class="profile">
+          <h1>Anthony Shea</h1>
+          <img
+            src="Anthony.jpeg"
+            alt="Profile picture of Anthony Shea"
+            class="profile-photo"
+          />
+        </section>
 
+        <section class="summary">
+          <h2>Profile Summary</h2>
+          <ul>
+            <li>
+              Data Scientist and Full Stack Engineer with 12+ years in the
+              Intelligence Community and multi-int fusion expertise.
+            </li>
+            <li>
+              Strong foundation in Physics, Mathematics, and Systems
+              Engineering, with proficiency in data analysis, visualization, and
+              reporting.
+            </li>
+            <li>
+              Effective communicator skilled at translating complex data into
+              actionable insights for informed decision-making.
+            </li>
+          </ul>
+        </section>
 
-    <textarea>
-        Stufffff
-    </textarea>
-    <select>
-        <option>Seattle</option>
-        <option>Portland</option>
-    </select>
-</body>
+        <!-- We’ll add Contact, Personal Info, Skills later -->
+      </aside>
+
+      <!-- RIGHT COLUMN -->
+      <main class="right-column">
+        <section class="experience">
+          <h2>Experience</h2>
+          <h3>Data Scientist at Rampart Technologies</h3>
+          <p class="dates">Jul 2023 – Present</p>
+          <ul>
+            <li>
+              Developed a full-stack web application for data forecasting using
+              React, Flask, and PostgreSQL.
+            </li>
+            <li>
+              Created ML and statistical models (ARIMA, Fb Prophet, GARCH,
+              PyTorch) to forecast trends and detect anomalies.
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
