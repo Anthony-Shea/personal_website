@@ -1,111 +1,142 @@
-/* === Base and Layout === */
+/* === Base === */
 body {
   margin: 0;
   padding: 0;
   font-family: "Fira Sans", Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #222;
 }
 
+/* === Layout === */
 .cv-container {
   display: flex;
-  flex-direction: row;
   min-height: 100vh;
 }
 
-/* === Left Column === */
 .left-column {
-  background-color: #304263; /* cvblue */
+  background-color: #304263;
   color: white;
   width: 32%;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem;
+}
+
+.right-column {
+  flex-grow: 1;
+  padding: 2.5rem 3rem;
   box-sizing: border-box;
 }
 
+/* === Left Column === */
 .profile h1 {
+  text-transform: uppercase;
   font-variant-caps: small-caps;
-  font-weight: bold;
-  font-size: 1.8rem;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  margin: 0;
   text-align: center;
+  font-weight: 700;
 }
 
 .profile-photo {
   width: 70%;
-  border-radius: 6px;
-  margin-bottom: 1.2rem;
+  border-radius: 8px;
+  margin: 1rem 0 1.5rem;
 }
 
-/* Section headings (left) */
 .left-column h2 {
   text-transform: uppercase;
   font-size: 0.9rem;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  padding-bottom: 0.25rem;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+  text-align: left;
+  width: 100%;
 }
 
-/* Lists in the left column */
 .left-column ul {
-  list-style: disc;
-  padding-left: 1.2rem;
-  margin-top: 0.5rem;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  margin-top: 0;
 }
 
 .left-column li {
-  font-size: 0.85rem;
-  line-height: 1.3rem;
   margin-bottom: 0.4rem;
 }
 
-/* === Right Column === */
-.right-column {
-  flex: 1;
-  padding: 2.5rem 2.5rem 4rem;
-  box-sizing: border-box;
+/* Contact / Personal Info / Skills / Links */
+.no-bullets {
+  list-style: none;
+  padding-left: 0;
 }
 
+.left-column a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.left-column a:hover {
+  text-decoration: underline;
+}
+
+.personal-info p,
+.skills li {
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+}
+
+/* === Right Column === */
 .right-column h2 {
-  text-transform: uppercase;
   color: #304263;
+  text-transform: uppercase;
   border-bottom: 2px solid #304263;
   font-size: 1.3rem;
   margin-top: 0;
+  margin-bottom: 1rem;
   padding-bottom: 0.25rem;
 }
 
 .right-column h3 {
-  font-variant-caps: small-caps;
   font-weight: 600;
+  text-transform: capitalize;
+  font-size: 1rem;
   margin-bottom: 0.25rem;
-  font-size: 1.1rem;
 }
 
-.dates {
+.dates,
+.school-detail {
   float: right;
   font-weight: bold;
   color: #304263;
   font-size: 0.9rem;
 }
 
-.right-column ul {
-  margin-top: 0.3rem;
+ul {
+  margin-top: 0.25rem;
   margin-bottom: 1rem;
-  padding-left: 1.25rem;
 }
 
-.right-column li {
-  margin-bottom: 0.3rem;
+.job,
+.school {
+  margin-bottom: 1.5rem;
+}
+
+.right-column p {
+  margin: 0.2rem 0 0.7rem;
   line-height: 1.4rem;
 }
 
-/* === Responsive adjustments === */
+/* === Hobbies, Certs === */
+.certifications p,
+.hobbies p {
+  font-size: 0.95rem;
+}
+
+/* === Responsive === */
 @media (max-width: 900px) {
   .cv-container {
     flex-direction: column;
@@ -114,15 +145,17 @@ body {
   .left-column {
     width: 100%;
     text-align: center;
-  }
-
-  .right-column {
-    width: 100%;
     padding: 1.5rem;
   }
 
-  .dates {
+  .right-column {
+    padding: 1.5rem;
+  }
+
+  .dates,
+  .school-detail {
     float: none;
     display: block;
+    font-size: 0.85rem;
   }
 }
