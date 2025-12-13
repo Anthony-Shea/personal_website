@@ -1,0 +1,166 @@
+% !TEX program = lualatex
+\documentclass[10pt, letterpaper]{article}
+
+% Packages
+\usepackage[margin=0.4in]{geometry}
+\usepackage{paracol}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{ragged2e}
+
+\newfontfamily\emojifont{Apple Color Emoji}[Renderer=Harfbuzz]
+
+% Define colors from CSS
+\definecolor{leftbg}{HTML}{304263}
+\definecolor{lefttext}{HTML}{FFFFFF}
+\definecolor{righttext}{HTML}{222222}
+\definecolor{accentcolor}{HTML}{304263}
+
+% Remove space before/after section headings
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{0.4em}{0.2em}
+\titlespacing*{\subsection}{0pt}{0.4em}{0.2em}
+
+% Format section/subsection (no color here, we'll add manually)
+\titleformat{\section}{\Large\bfseries}{\thesection}{0em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{0em}{}
+
+% Reduce paragraph spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.2em}
+
+% Setup colored background for left column using TikZ
+\usepackage{eso-pic}
+\AddToShipoutPictureBG{%
+  \AtPageLowerLeft{%
+    \color{leftbg}%
+    \rule{0.36\paperwidth}{\paperheight}%
+  }%
+}
+
+% Increase gap between columns
+\setlength{\columnsep}{1.5cm}
+
+\begin{document}
+
+% Start two-column layout
+\columnratio{0.36}
+\begin{paracol}{2}
+
+% === LEFT COLUMN ===
+\color{lefttext}
+\RaggedRight
+
+{\color{lefttext}\section*{Anthony Shea}}
+
+\includegraphics[width=\linewidth]{Anthony.jpg}
+
+\vspace{0.3em}
+
+{\color{lefttext}\subsection*{Profile Summary}}
+\begin{itemize}[leftmargin=*, itemsep=0.15em, topsep=0pt]
+    \item Data Scientist and Backend Engineer with multi-int fusion expertise.
+    \item Strong foundation in Physics, Mathematics, and Systems Engineering, with proficiency in data analysis, visualization, and reporting.
+    \item Effective communicator skilled at translating complex data into actionable insights for informed decision-making.
+\end{itemize}
+
+{\color{lefttext}\subsection*{Contact Details}}
+\begin{itemize}[leftmargin=*, label={}, itemsep=0.05em, topsep=0pt]
+    \item {\emojifont 📧} \href{mailto:agshea25@gmail.com}{agshea25@gmail.com}
+    \item {\emojifont 📞} 757 270 7613
+    \item {\emojifont 📍} Denver, Colorado
+\end{itemize}
+
+{\color{lefttext}\subsection*{Personal Information}}
+\textbf{Citizenship:} USA \\[0.2em]
+\textbf{Clearance:} TS/SCI and CI Poly \\[0.2em]
+\textbf{Languages:} English, Russian
+
+{\color{lefttext}\subsection*{Skills}}
+\begin{itemize}[leftmargin=*, itemsep=0.15em, topsep=0pt]
+    \item Languages: SQL, Python, TypeScript, Go
+    \item ML/DL: PyTorch, Keras, TensorFlow, OpenCV, Scikit-learn
+    \item Databases: Elasticsearch, MySQL, MongoDB
+    \item DevOps: Git/GitLab, Docker, Logstash, Vim
+    \item Imagery: PI, SAR, IR, HSI, FMV, Photogrammetry
+\end{itemize}
+
+% Switch to right column
+\switchcolumn
+\color{righttext}
+
+% === RIGHT COLUMN ===
+{\color{accentcolor}\section*{Experience}}
+
+{\color{accentcolor}\subsection*{Data Scientist at Torch Technologies}}
+\textit{Jan 2025 – Aug 2025}
+
+\begin{itemize}[leftmargin=*, itemsep=0.15em, topsep=0.2em]
+    \item Deployed CNN with 92\% accuracy,processed 10Gb/day; <1 min latency
+    \item Created 6 data pipelines; streamed data via TCP; processed for database
+    \item Web scraped ephemeris and quaternion data;created footprints
+    \item Mentored entry level data engineers/scientists to deploy models
+\end{itemize}
+
+{\color{accentcolor}\subsection*{Data Scientist at Rampart Technologies}}
+\textit{Jul 2023 – Jan 2025}
+
+\begin{itemize}[leftmargin=*, itemsep=0.15em, topsep=0.2em]
+    \item Developed web app for data forecasting with React, Flask, and SQL.
+    \item Created ML and statistical models (ARIMA, Fb Prophet, GARCH, PyTorch) to forecast trends and detect anomalies.
+    \item Displayed results via interactive line graphs, heat maps (H3), text data.
+    \item Created 12 data pipelines with Logstash to extract data from a MySQL database to an Elasticsearch database; used REGEX and Bash scripting to find latest CSV.
+    \item Stood up an Elasticsearch database; created a Kibana dashboard for KPIs and data flow visualization.
+\end{itemize}
+
+\vspace{0.3em}
+
+{\color{accentcolor}\subsection*{Imagery Analyst / Scientist at US Air Force}}
+\textit{Nov 2011 – Present}
+
+\begin{itemize}[leftmargin=*, itemsep=0.15em, topsep=0.2em]
+    \item 95\% accuracy on Computer Vision model; enlisted job automated.
+    \item Stationed at Osan AB, RAF Molesworth, Langley AFB, NGA Washington, and NGA Denver, with extensive experience in 1st, 2nd, and 3rd phase analysis of all forms of imagery.
+    \item Served in Active Duty from 2011–2022; 2022-present USAF Reserve Component (IMA). Transitioned to data science in reserves.
+    \item Developed Computer Vision project to automate 1st-phase analysis and photogrammetry using TensorFlow and Keras.
+    \item Scripts query image database APIs, store live inference data in Elasticsearch, and visualize it in Kibana.
+\end{itemize}
+
+\vspace{0.3em}
+
+{\color{accentcolor}\section*{Education}}
+
+{\color{accentcolor}\subsection*{B.S. Physics, Minor in Mathematics}}
+\textit{Colorado State University — 2019–2025}
+
+All physics coursework complete; only 3 general-education classes remain.
+
+\vspace{0.3em}
+
+{\color{accentcolor}\subsection*{B.S. Systems Engineering, Mechanical Engineering Focus}}
+\textit{U.S. Air Force Academy — 2015–2019}
+
+All academic requirements complete, degree not awarded.
+
+\vspace{0.3em}
+
+{\color{accentcolor}\subsection*{Associate of Applied Science, Intelligence Studies}}
+\textit{Community College of the Air Force — 2011–2014}
+
+\vspace{0.3em}
+
+{\color{accentcolor}\section*{Certifications}}
+GEOINT Professional Certification — Imagery Analysis Level II, NGA
+
+\vspace{0.3em}
+
+{\color{accentcolor}\section*{Hobbies}}
+Reading, Rock Climbing, Travel, Learning, Running
+
+\end{paracol}
+
+\end{document}
