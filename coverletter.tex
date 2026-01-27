@@ -1,0 +1,31 @@
+\documentclass{article}
+
+\title{Cover Letter For Lynx}
+\author{Anthony Shea}
+\date{\today}
+\begin{document}
+\maketitle
+    Dear Lynx,
+    
+    I am writing to express my interest in the System Test/Automation Engineer role.
+    I found out about the role from my neighbor Addison Thomas. I studied Systems Engineering at the United States Air Force Academy.
+    While there, I learned how to translate user needs into design requirements into specific features.
+    I worked as an Intellienge analyst in the Air Force after the academy.
+    For the last two and a half years, I have been working with the the job title Data Scientist.
+    However, I generally had to build software to deploy the models I created for the companies I worked for.
+
+    For example, at my last company, I had to deploy a convolutional neural network.
+    The project was started before I took the job, but I basically had to start from scratch.
+    The previous employee had over ten python modules that were all over a thousand lines of code each.
+    I was able to get the project to completion and also get the whole project down to around two hundred lines total when I finally deployed the first working version.
+    My predecessor had to much code because, after creating the TCP connection, he checked each byte to see if he had the start of a new message and then checked each byte until he had the end of that message.
+    Once he did that he put the message in RabbitMQ, then took the message out and parsed it from HDF5 to a python dictionary, then put it back into RabbitMQ, then put it in the ML model, then put it in the database.
+    The first thing I did was talk to the data provider and establish that we needed an 8 byte header for the message length.
+    Using that I could just ask for 8 bytes get the message length, then ask for the rest of the message. I used a simple queue data structure to store the message and then set up the model as a dedicated TensorFlow server that did inference and then sent the output to the database.
+
+    After that I was able to capture metrics for my machine learning pipeline using beats from the elasticstack and a kibana dashboard.
+    I was able to confirm latency and throughput requirements were met using my logs and that dashboard.
+    I believe that in future projects I could clearly identify requirements from needs and then develop tests for those requirements to see that the needs are met.
+    
+
+\end{document}
